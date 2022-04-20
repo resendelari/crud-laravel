@@ -21,6 +21,12 @@
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Larissa', 'larissaresende922@gmail.com','999999999','2022-04-20 10:00:00','2022-04-20 10:00:00');
+INSERT INTO `users` VALUES (1,'Larissa', 'larissaresende922@gmail.com','$2y$10$qekcv88akSUXw09eK7xSCOk/ncm1c6gUiXDzVx.EWgLkEss0bvQqK','2022-04-20 10:00:00','2022-04-20 10:00:00');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `contacts` WRITE;
+/*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+INSERT INTO `contacts` VALUES (1,'Larissa', 'larissaresende922@gmail.com','999999999','2022-04-20 10:00:00','2022-04-20 10:00:00');
+/*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 UNLOCK TABLES;
