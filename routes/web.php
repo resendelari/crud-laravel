@@ -29,5 +29,5 @@ Route::get('/contacts/new',[\App\Http\Controllers\ContactController::class, 'get
 Route::post('/contacts/add',[\App\Http\Controllers\ContactController::class, 'addContacts']);
 Route::get('/contact/{id}/edit',[\App\Http\Controllers\ContactController::class, 'editContacts']);
 Route::post('/contacts/update/{id}',[\App\Http\Controllers\ContactController::class, 'updateContact']);
-Route::post('/contacts/delete/{id}',[\App\Http\Controllers\ContactController::class, 'deleteContact']);
+Route::delete('/contacts/delete/{id}',[\App\Http\Controllers\ContactController::class, 'deleteContact']);
 

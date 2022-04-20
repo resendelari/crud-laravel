@@ -36,10 +36,11 @@
                                         <td>{{$c->phone}}</td>
                                         <td><a href="contact/{{$c->id}}/edit" class="btn btn-info"></a></td>
                                         <td>
-                                            <form action="contacts/delete/{{$c->id}}" method="post"></form>
+                                            <form action="contacts/delete/{{$c->id}}" method="post">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger"></button>
+                                            </form>
                                         </td>
                                     </tr>
                                     </tbody>
