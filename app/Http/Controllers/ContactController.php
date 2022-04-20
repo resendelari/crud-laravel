@@ -25,10 +25,7 @@ class ContactController extends Controller
     {
         $v_Contact = new Contact;
         $v_Contact =  $v_Contact->create($request->all());
-        $v_ContactId =  $v_Contact->id;
-        return Redirect::to('/contacts')->with([
-            'p_ContactId' => $v_ContactId,
-            ]);
+        return Redirect::to('/contacts');
     }
 
     public function editContacts($p_Id)
