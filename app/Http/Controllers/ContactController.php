@@ -25,17 +25,19 @@ class ContactController extends Controller
     {
         $v_Contact = new Contact;
         $v_Contact =  $v_Contact->create($request->all());
-        return Redirect::to('/contacts');
+        $v_ContactId =  $v_Contact->id;
+        return Redirect::to('/contacts')->with([
+            'p_ContactId' => $v_ContactId,
+            ]);
     }
 
     public function editContacts($p_Id)
     {
         $v_Contact = Contact::findOrFail($p_Id);
-        $v_Request = new Request();
-        $v_Request =  $v_Contact->create($v_Request->all());
+        $v_ContactId = $p_Id;
         return view('/contacts.form')->with([
             'p_Contact' => $v_Contact,
-            'p_Request'=> $v_Request
+            'p_ContactId' => $v_ContactId,
             ]);
     }
 

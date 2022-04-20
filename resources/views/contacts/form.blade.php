@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                            @if($p_Request::is('*/edit'))
+                            @if($p_ContactId != null)
                             <form action="{{url('contacts/update')}}/{{$p_Contact->id}}" method="post">
                                 @csrf
                                 <div class="form-group">
@@ -30,7 +30,7 @@
                                     <input type="text" name="phone " class="form-control"  value="{{$p_Contact->phone}}">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="{{url('contacts/list')}}">Go Back</a>
+                                <a href="{{url('contacts')}}">Go Back</a>
                             </form>
                             @else
                                 <form action="{{url('contacts/add')}}" method="post">
